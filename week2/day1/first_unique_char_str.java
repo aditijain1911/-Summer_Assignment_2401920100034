@@ -1,0 +1,17 @@
+package week2.day1;
+
+import java.util.HashMap;
+
+class first_unique_char_str {
+     public int firstUniqChar(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(int i=0; i<s.length(); i++){
+            char d = s.charAt(i);
+            map.put(d, map.getOrDefault(d,0)+1);
+        }
+        for(int i=0 ; i< s.length(); i++){
+            if(map.get(s.charAt(i))==1) return i;
+        }
+        return -1;
+    }
+}
