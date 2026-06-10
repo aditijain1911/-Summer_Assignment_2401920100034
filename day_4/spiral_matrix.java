@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class spiral_matrix {
     public List<Integer> spiralOrder(int[][] matrix) {
         int m = matrix.length;
         int n = matrix[0].length;
